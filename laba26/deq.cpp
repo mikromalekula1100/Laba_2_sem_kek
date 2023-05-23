@@ -5,7 +5,7 @@
     Size = 0;
     head = nullptr;
     tail = nullptr;
-    cout<<"constructor"<<" "<<this<<" "<< endl;
+    // cout<<"constructor"<<" "<<this<<" "<< endl;
 }
 
 deq::~deq() {
@@ -20,7 +20,7 @@ deq::~deq() {
     phead = nullptr;
     head = nullptr;
     tail = nullptr;
-    cout<<"destructor"<<" "<<this<<" "<< endl;
+    // cout<<"destructor"<<" "<<this<<" "<< endl;
 }
 
     deq::deq(const deq &other)
@@ -36,7 +36,7 @@ deq::~deq() {
                 }
         }
             
-        cout<<"copy"<<" "<<this<<" "<<"from"<<&other<<endl;
+        // cout<<"copy"<<" "<<this<<" "<<"from"<<&other<<endl;
         
     }
 
@@ -156,17 +156,6 @@ deq operator*(const deq &lol1, const deq &lol2)
     return keke;
 }
 
-
-    // deq operator+( deq &lol1,  deq &lol2)
-    // {
-    //     deq keke ;
-    //     keke.Size = lol1.Size + lol2.Size;
-    //     keke.head = lol1.head;
-    //     keke.tail = lol2.tail;
-    //     lol1.tail->change_next(lol2.head);
-    //     return keke;
-    // }
-
     deq operator+(const deq &lol1,const  deq &lol2)
     {
         deq keke;
@@ -199,17 +188,3 @@ deq operator*(const deq &lol1, const deq &lol2)
         return l1.sort() + l2 + l3.sort();
     }
 
-        // l1 = l1.sort();
-        // l2 = l2;
-        // l3 = l3.sort();
-        // deq l4 = l1+l2; 
-        // return (l4 + l3);   
-// deq operator+(const deq& lol1, const deq& lol2)
-// {
-//     deq keke;
-//     keke.Size = lol1.Size + lol2.Size;
-//     keke.head = lol1.head;
-//     lol1.tail->change_next(lol2.head);
-//     keke.tail = lol2.tail;
-//     return keke;
-// }

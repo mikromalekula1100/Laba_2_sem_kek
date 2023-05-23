@@ -4,18 +4,16 @@ using namespace std;
 #include "deq.h"
 
 
-// void foo(deq l){
-
-//     cout<<l.size()<<endl;
-// }
 
 int main(){  
-    deq lol1,lol2,lol3;
-    lol2.push_back(2);
-    lol2.push_back(1);
+    deq lol1,lol2;
+    lol2.push_back(1111);
+    lol2.push_back(22);
+    
+    
 
-    deq t = (lol3+lol1+lol2);
-    // foo(lol1);
+    deq t = (lol1+lol2);
+    
     t = t.sort();
     for(int i=0;i<t.size();++i){cout<<t[i]<<" ";}
     cout<<endl;

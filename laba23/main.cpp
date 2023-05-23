@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -16,6 +15,7 @@ elem_tree* new_top(int value){
     kek->left = NULL;
     return kek;
 }
+
 void add(elem_tree* elem,  elem_tree * & head){
     if(head == NULL) head = elem;
     else{
@@ -23,13 +23,14 @@ void add(elem_tree* elem,  elem_tree * & head){
             if(head->left==NULL)head->left = elem;
             else add(elem,head->left);
         }
-        else if(head->value == elem->value) { cout<<"такой узел уже существует"<<endl;}
+        else if(head->value == elem->value) { cout<<"такой узел уже ѝущеѝтвует"<<endl;}
         else{
             if(head->right==NULL) head->right = elem;
             else add(elem,head->right);
         }
     }
 }
+
 void printTree(elem_tree* root, int indent = 0) {
     if (root != NULL) {
         // Выводим правое поддерево
@@ -132,10 +133,10 @@ int main()
     while(1){
         cout<<"Ведите команду:"<<endl;
         cout<<"Add - добавление нового узла."<<endl;
-        cout<<"View - визуализация дерева."<<endl;
+        cout<<"View - визуализациѝ дерева."<<endl;
         cout<<"Del - удаление узла."<<endl;
         cout<<"Break - завершить работу программы."<<endl;
-        cout<<"Check - проверка, является ли дерево линейным списком вершин."<<endl;
+        cout<<"Check - проверка, ѝвлѝетѝѝ ли дерево линейным ѝпиѝком вершин."<<endl;
         string k;
         cin>>k;
         if(k == "Add"){
@@ -144,7 +145,7 @@ int main()
             
             int s;
             cin>>s;
-            if(head == NULL) cout<<"Корень дерева создан!"<<endl;
+            if(head == NULL) cout<<"Корень дерева ѝоздан!"<<endl;
             add(new_top(s),head);
             
         }
@@ -155,14 +156,14 @@ int main()
             break;
         }
         if(k == "Del"){
-            cout<<"Введите значение удаляемого узла.";
+            cout<<"Введите значение удалѝемого узла.";
             int s;
             cin>>s;
             delete_top(head,s);
         }
         if(k == "Check"){
-            if(is_linear_list_of_vertices(head)) cout<<"Дерево ЯВЛЯЕТСЯ линейным списком вершин."<<endl;
-            else cout<<"Дерево НЕ ЯВЛЯЕТСЯ линейным списком вершин."<<endl;
+            if(is_linear_list_of_vertices(head)) cout<<"Дерево ЯВЛЯЕТСЯ линейным ѝпиѝком вершин."<<endl;
+            else cout<<"Дерево НЕ ЯВЛЯЕТСЯ линейным ѝпиѝком вершин."<<endl;
         }
     }
 }

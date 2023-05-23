@@ -5,7 +5,7 @@ using namespace std;
 class Node{
 public:
     Node(int value);
-    // ~Node();
+    
     void print();
     Node* get_next();
     int get_value();

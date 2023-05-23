@@ -6,11 +6,6 @@ Node::Node(int value)
     next = nullptr;
 }
 
-// Node::~Node()
-// {
-//     cout<<"node was deleted"<<endl;
-// }
-
 void Node::print()
 {
     cout<<value<<endl;

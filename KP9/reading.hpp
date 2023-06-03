@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
 
-
 using namespace std;
 
-ifstream in("text1.txt");
+ifstream in("text2.txt");
 int c = 29;
 
 struct elem

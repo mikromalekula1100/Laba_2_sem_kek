@@ -121,22 +121,34 @@ void max_modul(){
     
     pr x1,x2;
     x1.x = -100000;
-    x2.x = -100000;
+    x2.x = -200000;
     for(a i:A){
-        if(i.value > x2.x){
+        if(i.value >= x2.x){
+            if(x1.x == i.value){
+                if(i.number_column<x1.column){
+                    x2.column = x1.column;
+                    x2.x = x1.x;
+                    x1.column = i.number_column;
+                    continue;
+                }
+                
+            }
             x1.x = x2.x;
             x2.x = i.value;
             x1.column = x2.column;
             x2.column = i.number_column;
         }
+
     }
+    
     if(x1.x == x2.x){
+        cout<<x1.column<<" "<<x1.x<<" "<<x2.column<<" "<<x2.x<<endl;
         for(int i = 0;i<A.size();++i){
             if(A[i].number_column == x1.column){
                 A[i].value = A[i].value/(x1.x);
             }
-            return;
         }
+        return;
     }
     for(int i = 0;i<A.size();++i){
             if(A[i].number_column == x2.column){
@@ -155,6 +167,7 @@ int main(){
     print_A();
     print_M();
     print_matrix();
+    cout<<endl;
     max_modul();
     cout<<endl;
     print_matrix();
